@@ -274,9 +274,9 @@ pub fn xor64(mut num: u64) -> u64 {
 
 pub fn init64(f: fn(&mut[u64]), path: &str) {
     if Path::new(path).exists() {
-        println!("Found file: {}", path);
+        println!("#DEBUG\tFound file: {}", path);
     } else {
-        println!("Creating file: {}", path);
+        println!("#DEBUG\tCreating file: {}", path);
         let mut vec = vec![0; 64];
         f(&mut vec);
         vector_to_file(&vec, path);

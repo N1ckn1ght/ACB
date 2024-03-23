@@ -20,7 +20,7 @@ fn main() {
 
     chara.w.rand = 0;
 
-    println!("\n--- AKIRA HAS BEEN FULLY LOADED INTO MACHINE MEMORY ---\n");
+    println!("#DEBUG\t--- AKIRA HAS BEEN FULLY LOADED INTO MACHINE MEMORY ---");
 
     let mut hmc = 0;
     let scan = [true, true];
@@ -37,7 +37,6 @@ fn main() {
         }
 
         if scan[hmc & 1] {
-            println!("Processing...\n");
             let best_move = chara.think(ab[abi], time, dl);
             abi = 0;
             println!();
